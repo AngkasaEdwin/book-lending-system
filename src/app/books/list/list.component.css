@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+button.rent-button {
+  background-color: "#3700B3";
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.gridrow {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.gridcol {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.gridcol img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}

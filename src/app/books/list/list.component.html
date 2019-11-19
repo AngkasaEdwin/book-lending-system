@@ -1,1 +1,15 @@
-<p>listtest works!</p>
+<div class="gridrow" *ngIf="filteredList">
+	<div class="gridcol" *ngFor="let item of filteredList">
+		<img src="{{item.img_path}}" style="width:100%">
+		<div>
+			<b>{{item.title}}</b> | {{item.author}}<br>
+			ISBN: {{item.isbn}}
+		</div>
+		<div style="text-align: center;">
+			<button type="button" class="rent-button">Rent</button>
+		</div>
+	</div>
+</div>
+<div class="gridrow" *ngIf="!filteredList">
+	<h3>Sorry, all books are rented out!</h3>
+</div>
