@@ -1,3 +1,7 @@
+<div>
+	<input type="text" (change)="search_book($event.target.value)">
+</div>
+
 <div class="gridrow" *ngIf="filteredList">
 	<div class="gridcol" *ngFor="let item of filteredList">
 		<img src="{{item.img_path}}" style="width:100%">

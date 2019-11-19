@@ -1,5 +1,5 @@
 export interface RentedBook {
 	id: number;
-    rent_duration: int;
-	return_date: date;
+    rent_duration: number;
+	return_date: Date;
 }

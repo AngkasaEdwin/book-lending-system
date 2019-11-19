@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from '../models/book';
 
 @Component({
   selector: 'app-list',
@@ -16,7 +17,7 @@ export class ListComponent implements OnInit {
 	this.initMockBooks();
 	
 	//Exclude rented books in local storage
-	let rentedIds = localStorage.getItem("rented_list");
+	let rentedIds = JSON.parse(localStorage.getItem("rented_list"));
 	
 	if(rentedIds){
 		rentedIds = rentedIds.map(x => +x.id);
@@ -43,8 +44,8 @@ export class ListComponent implements OnInit {
 		if(!title || title.length < 3){
 			this.filteredList = this.list;
 		}
-		if(this.filteredList && 
-			this.filteredList.map(x => x.title)
-							.filter(y => y.includes(string)));
+		if(this.filteredList){
+			this.filteredList = this.filteredList.filter(y => y.title.includes(title))
+		}
 	}
 }
