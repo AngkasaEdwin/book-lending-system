@@ -1,6 +1,27 @@
+<div id="loginModal" class="modal">
+	<div class="modal-content">
+    	<span class="close" (click)="closeModal()">&times;</span>
+    	<div class="modal-header">
+	    	Rental Confirmation
+	    </div>
+	    <div class="modal-body">
+	    	<form >
+	    		<div class="padded-text">Please enter your membership info to rent <i>'{{focusedTitle}}'</i>:</div>
+	    		<label for="username"><b>Username</b></label>
+		    	<input id="username" type="text" name="username" placeholder="johndoe" class="forminput">
+				<label for="membership"><b>Membership #</b></label>
+				<input id="membership" type="text" name="membership" placeholder="125591" class="forminput">
+				<label for="duration"><b>Rental Duration (days)</b></label>
+		    	<input id="duration" type="text" name="duration" placeholder="7" class="forminput">
+		    	<div style="text-align:center;"><button type="submit" class="rent-button">Rent this Book</button></div>
+			</form>
+		</div>
+	</div>
+</div>
+
 <div>
 	<input type="text" (input)="search_book($event.target.value)"
-		placeholder="Search Title..." class="searchbar">
+		placeholder="Search Title...">
 </div>
 
 <div class="gridrow" *ngIf="filteredList">
@@ -8,13 +29,13 @@
 		<img src="{{item.img_path}}" style="width:100%">
 		<div class="book_desc">
 			<b>{{item.title}}</b> | {{item.author}}<br>
-			<em>ISBN: {{item.isbn}}</em>
+			<em class="less-focused-text">ISBN: {{item.isbn}}</em>
 		</div>
 		<div style="text-align: center;">
-			<button type="button" class="rent-button">Rent</button>
+			<button type="button" class="rent-button" (click)="openModal(item.id)">Rent</button>
 		</div>
 	</div>
 </div>
 <div class="gridrow" *ngIf="!filteredList">
-	<h3>Sorry, all books are rented out!</h3>
+	<h3 style="text-align:center;">Sorry, all books are rented out!</h3>
 </div>

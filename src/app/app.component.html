@@ -1,9 +1,8 @@
 <div id="dashboard">
 	<div id="sidebar">
 		<div><img src="assets/website_logo.png" class="site_logo"></div>
-		<a class="sidenav" href="#">Library<span style="float: right;">&gt;</span></a>
-		<a class="sidenav" href="#">Rental<span style="float: right;">&gt;</span></a>
-		<a class="sidenav" href="#">Return<span style="float: right;">&gt;</span></a>
+		<a class="sidenav" routerLink="/list" routerLinkActive="active">Library<span style="float: right;">&gt;</span></a>
+		<a class="sidenav" routerLink="/return" routerLinkActive="active">Return<span style="float: right;">&gt;</span></a>
 	</div>
 	<div id="content">
 		<router-outlet></router-outlet>

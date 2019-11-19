@@ -10,6 +10,7 @@ export class ListComponent implements OnInit {
 
   list: Array<Book>;
   filteredList: Array<Book>;
+  focusedTitle = "";
 
   constructor() { }
 
@@ -48,5 +49,18 @@ export class ListComponent implements OnInit {
 		if(this.filteredList){
 			this.filteredList = this.filteredList.filter(y => y.title.toLowerCase().includes(title.toLowerCase()));
 		}
+	}
+	
+	openModal(id){
+		let book = this.filteredList.find(x => x.id === +id);
+		if(book)
+			this.focusedTitle = book.title;
+		let modal = document.getElementById("loginModal");
+		modal.style.display = "block";
+	}
+	
+	closeModal(){
+		let modal = document.getElementById("loginModal");
+		modal.style.display = "none";
 	}
 }
