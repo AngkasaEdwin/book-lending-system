@@ -43,9 +43,10 @@ export class ListComponent implements OnInit {
 	search_book(title: string){
 		if(!title || title.length < 3){
 			this.filteredList = this.list;
+			return;
 		}
 		if(this.filteredList){
-			this.filteredList = this.filteredList.filter(y => y.title.includes(title))
+			this.filteredList = this.filteredList.filter(y => y.title.toLowerCase().includes(title.toLowerCase()));
 		}
 	}
 }

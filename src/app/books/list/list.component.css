@@ -2,8 +2,22 @@
   box-sizing: border-box;
 }
 
+.searchbar {
+	font-size: 18px;
+	padding: 5px;
+	border-color: "#eeeeee";
+	border-radius: 4px;
+}
+
+.book_desc {
+	margin-top: 8px;
+	font-family: helvetica, arial;
+	font-size: 16px;
+	line-height: 1.3;
+}
+
 button.rent-button {
-  background-color: "#3700B3";
+  background-color: #003c8f;
   border: none;
   color: white;
   padding: 10px 20px;

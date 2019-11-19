@@ -1,3 +1,11 @@
-<h1>NAVBAR</h1>
-<router-outlet></router-outlet>
-<h1>FOOTER</h1>
+<div id="dashboard">
+	<div id="sidebar">
+		<div><img src="assets/website_logo.png" class="site_logo"></div>
+		<a class="sidenav" href="#">Library<span style="float: right;">&gt;</span></a>
+		<a class="sidenav" href="#">Rental<span style="float: right;">&gt;</span></a>
+		<a class="sidenav" href="#">Return<span style="float: right;">&gt;</span></a>
+	</div>
+	<div id="content">
+		<router-outlet></router-outlet>
+	</div>
+</div>

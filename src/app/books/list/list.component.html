@@ -1,13 +1,14 @@
 <div>
-	<input type="text" (change)="search_book($event.target.value)">
+	<input type="text" (input)="search_book($event.target.value)"
+		placeholder="Search Title..." class="searchbar">
 </div>
 
 <div class="gridrow" *ngIf="filteredList">
 	<div class="gridcol" *ngFor="let item of filteredList">
 		<img src="{{item.img_path}}" style="width:100%">
-		<div>
+		<div class="book_desc">
 			<b>{{item.title}}</b> | {{item.author}}<br>
-			ISBN: {{item.isbn}}
+			<em>ISBN: {{item.isbn}}</em>
 		</div>
 		<div style="text-align: center;">
 			<button type="button" class="rent-button">Rent</button>
