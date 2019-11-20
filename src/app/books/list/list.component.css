@@ -10,6 +10,11 @@ input[type=text] {
 	margin-bottom: 10px;
 }
 
+.content_title {
+	text-align: center;
+	font-family: helvetica, arial;
+}
+
 .book_desc {
 	margin-top: 8px;
 	font-family: helvetica, arial;

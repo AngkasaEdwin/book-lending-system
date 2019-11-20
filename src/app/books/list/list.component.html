@@ -35,7 +35,10 @@
 		</div>
 	</div>
 </div>
-
+<div>
+	<h2 class='content_title' *ngIf="status === 'rented'">Rented Books</h2>
+	<h2 class='content_title' *ngIf="status !== 'rented'">Library</h2>
+</div>
 <div>
 	<input type="text" (input)="search_book($event.target.value)"
 		placeholder="Search Title...">
