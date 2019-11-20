@@ -4,4 +4,5 @@ export interface Book {
 	author: string;
     isbn: string;
 	img_path: string;
+	is_available: boolean;
 }

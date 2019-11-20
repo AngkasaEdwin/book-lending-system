@@ -62,6 +62,13 @@ button.rent-button {
   width: 100%;
 }
 
+.nobook_page {
+	text-align: center;
+	color: #eee;
+	font-family: helvetica, arial;
+	padding-top: 10%;
+}
+
 .close {
   color: #aaa;
   float: right;
@@ -103,6 +110,13 @@ button.rent-button {
   padding: 20px;
   border: 1px solid #888;
   width: 50%;
+}
+
+.alert {
+	color: red;
+	font-style: italic;
+	font-family: helvetica, arial;
+	font-size: 18px;
 }
 
 @media screen and (max-width: 800px) {

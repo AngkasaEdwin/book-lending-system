@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ListComponent } from './list/list.component';
-import { ReturnComponent } from './return/return.component';
 
 
 const routes: Routes = [
 	{ path: 'list', component: ListComponent },
-	{ path: 'return', component: ReturnComponent },
+	{ path: 'list/:status', component: ListComponent },
 	{ path: '', redirectTo: '/list', pathMatch: 'full' },
 ];
 
